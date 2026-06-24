@@ -11,7 +11,7 @@ a theoretical reason to do so.
 from pathlib import Path
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-BASE_DIR   = Path(__file__).parent   # rvi_project/
+BASE_DIR   = Path(__file__).parent   # repo root (the facvi/ folder itself)
 DATA_DIR   = BASE_DIR / "data"
 RASTER_DIR = DATA_DIR / "rasters"
 WC_DIR     = DATA_DIR / "worldclim"
@@ -59,21 +59,15 @@ HYDRORIVERS_URL = (
 SRTM_LAT_RANGE = (36, 43)   # range(start, stop): N36–N42
 SRTM_LON_RANGE = (26, 45)   # range(start, stop): E026–E044
 
-# ── TURKEY (original) — restore these values to run Turkey analysis ──────────
-# COUNTRY_NAME = "Turkey"
-# COUNTRY_CODE = "tur"
-# BBOX = {"west": 25.5, "south": 35.8, "east": 44.9, "north": 42.2}
-# CRS_METRIC = "EPSG:32636"
-# GEOFABRIK_URL = "https://download.geofabrik.de/europe/turkey-latest.osm.pbf"
-# HYDRORIVERS_REGION = "eu"
-# SRTM_LAT_RANGE = (49, 50)
-# SRTM_LON_RANGE = (5, 7)
 # ── LUXEMBOURG (test) — restore these values to run Luxembourg analysis ───────
 # COUNTRY_NAME = "Luxembourg"
 # COUNTRY_CODE = "lux"
 # BBOX = {"west": 5.7, "south": 49.4, "east": 6.6, "north": 50.2}
 # CRS_METRIC = "EPSG:32632"
 # GEOFABRIK_URL = "https://download.geofabrik.de/europe/luxembourg-latest.osm.pbf"
+# HYDRORIVERS_REGION = "eu"
+# SRTM_LAT_RANGE = (49, 50)
+# SRTM_LON_RANGE = (5, 7)
 
 # MODIS NDVI period (MOD13A3, monthly 1 km)
 NDVI_START = "2015-01-01"
