@@ -1,0 +1,41 @@
+# FACVI Pipeline — Python dependencies
+# Install with: pip install -r requirements.txt
+# Conda alternative: conda install --file requirements.txt -c conda-forge
+#
+# Core tested with Python 3.11 on Windows 10 and Ubuntu 22.04.
+# Conda is recommended (handles GDAL/pyproj binary builds automatically).
+
+# ── Geospatial ────────────────────────────────────────────────────────────────
+geopandas>=0.14.0
+shapely>=2.0
+pyproj>=3.6
+rasterio>=1.3
+gdal>=3.7           # or install via conda: conda install gdal
+pyogrio>=0.7        # fast GeoPackage I/O backend for geopandas
+fiona>=1.9
+
+# ── Raster processing ─────────────────────────────────────────────────────────
+pysheds>=0.4        # TWI computation (D8 flow direction)
+scipy>=1.11
+
+# ── HDF (MODIS snow cover) ────────────────────────────────────────────────────
+pyhdf>=0.10         # read MODIS HDF4 files
+requests>=2.31
+netrc                # stdlib; listed for documentation only
+
+# ── Spatial analysis ──────────────────────────────────────────────────────────
+libpysal>=4.9
+esda>=2.5
+
+# ── OSM roads ────────────────────────────────────────────────────────────────
+osmnx>=1.9
+# ogr2ogr (GDAL CLI) must be on PATH or discoverable via GDAL_OGR2OGR env var
+
+# ── Data science ─────────────────────────────────────────────────────────────
+numpy>=1.25
+pandas>=2.1
+scikit-learn>=1.4
+shap>=0.45          # optional but required for SHAP plots in step 15
+
+# ── Visualisation ─────────────────────────────────────────────────────────────
+matplotlib>=3.8
