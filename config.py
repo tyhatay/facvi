@@ -20,29 +20,29 @@ LOG_DIR    = BASE_DIR / "logs"
 # ── STUDY AREA ────────────────────────────────────────────────────────────────
 # Change these values to adapt the pipeline to a different country.
 
-COUNTRY_NAME = "Luxembourg"  # Geocoding string used by osmnx (English name)
-COUNTRY_CODE = "lux"         # Lowercase ISO 3166 alpha-3; used in output filenames
+COUNTRY_NAME = "Turkey"  # Geocoding string used by osmnx (English name)
+COUNTRY_CODE = "tur"     # Lowercase ISO 3166 alpha-3; used in output filenames
 
 # WGS84 bounding box (west, south, east, north)
 BBOX = {
-    "west":  5.7,
-    "south": 49.4,
-    "east":  6.6,
-    "north": 50.2,
+    "west":  25.5,
+    "south": 35.8,
+    "east":  44.9,
+    "north": 42.2,
 }
 
 # Projected CRS in metres — used for area and distance calculations.
-# Luxembourg: EPSG:32632 (UTM Zone 32N).
+# Turkey: EPSG:32636 (UTM Zone 36N).
 # Examples:
-#   Turkey:   EPSG:32636 (UTM Zone 36N)
-#   Iran:     EPSG:32638 (UTM Zone 38N)
-#   Brazil:   EPSG:32722 (UTM Zone 22S)
-CRS_METRIC = "EPSG:32632"
+#   Luxembourg: EPSG:32632 (UTM Zone 32N)
+#   Iran:        EPSG:32638 (UTM Zone 38N)
+#   Brazil:      EPSG:32722 (UTM Zone 22S)
+CRS_METRIC = "EPSG:32636"
 
 # ── DATA SOURCES ──────────────────────────────────────────────────────────────
 # OSM road network — Geofabrik download page:
 #   https://download.geofabrik.de/
-GEOFABRIK_URL = "https://download.geofabrik.de/europe/luxembourg-latest.osm.pbf"
+GEOFABRIK_URL = "https://download.geofabrik.de/europe/turkey-latest.osm.pbf"
 
 # HydroRIVERS package — choose the regional package that covers your study area.
 #   eu = Europe        as = Asia        na = North America
@@ -55,9 +55,9 @@ HYDRORIVERS_URL = (
 )
 
 # SRTM 30m tile bounding box — integer degree ranges covering the study area.
-# Luxembourg spans N49, E005–E006.
-SRTM_LAT_RANGE = (49, 50)   # range(start, stop): N49
-SRTM_LON_RANGE = (5, 7)     # range(start, stop): E005–E006
+# Turkey spans N36–N42, E026–E044.
+SRTM_LAT_RANGE = (36, 43)   # range(start, stop): N36–N42
+SRTM_LON_RANGE = (26, 45)   # range(start, stop): E026–E044
 
 # ── TURKEY (original) — restore these values to run Turkey analysis ──────────
 # COUNTRY_NAME = "Turkey"
@@ -66,8 +66,14 @@ SRTM_LON_RANGE = (5, 7)     # range(start, stop): E005–E006
 # CRS_METRIC = "EPSG:32636"
 # GEOFABRIK_URL = "https://download.geofabrik.de/europe/turkey-latest.osm.pbf"
 # HYDRORIVERS_REGION = "eu"
-# SRTM_LAT_RANGE = (36, 43)
-# SRTM_LON_RANGE = (26, 45)
+# SRTM_LAT_RANGE = (49, 50)
+# SRTM_LON_RANGE = (5, 7)
+# ── LUXEMBOURG (test) — restore these values to run Luxembourg analysis ───────
+# COUNTRY_NAME = "Luxembourg"
+# COUNTRY_CODE = "lux"
+# BBOX = {"west": 5.7, "south": 49.4, "east": 6.6, "north": 50.2}
+# CRS_METRIC = "EPSG:32632"
+# GEOFABRIK_URL = "https://download.geofabrik.de/europe/luxembourg-latest.osm.pbf"
 
 # MODIS NDVI period (MOD13A3, monthly 1 km)
 NDVI_START = "2015-01-01"
