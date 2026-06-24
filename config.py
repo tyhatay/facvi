@@ -11,7 +11,7 @@ a theoretical reason to do so.
 from pathlib import Path
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-BASE_DIR   = Path(__file__).parent.parent   # rvi_project/
+BASE_DIR   = Path(__file__).parent   # rvi_project/
 DATA_DIR   = BASE_DIR / "data"
 RASTER_DIR = DATA_DIR / "rasters"
 WC_DIR     = DATA_DIR / "worldclim"
